@@ -4,3 +4,119 @@
     box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    display: flex;
+    width: 90%;
+    max-width: 40rem;
+}
+
+img { 
+    width: 100%;
+}
+
+.mobile-img {
+    display: none;
+}
+
+.content-holder {
+    flex: 1;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.image-holder {
+    flex: 1;
+}
+
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.item-title {
+    color:var(--Verydarkblue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.item-type {
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    margin-bottom: .5rem;
+}
+
+.item-desc {
+    margin-bottom: 1.5rem;
+}
+.item-desc, .item-type, .oldprice {
+    color: var(--Darkgrayishblue);
+}
+
+.oldprice {
+    text-decoration: line-through;
+}
+
+.currentprice, .item-title {
+    font-family: "Fraunces", sans-serif;
+}
+
+.currentprice {
+    color: var(--Darkcyan);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.cart-btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    align-self: center;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: .25rem;
+}
+
+
+@media  (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+    }
+}
